@@ -11,6 +11,19 @@
 		8109C98E2A7C7EF20096DD64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C98D2A7C7EF20096DD64 /* ContentView.swift */; };
 		8109C9902A7C7EF40096DD64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8109C98F2A7C7EF40096DD64 /* Assets.xcassets */; };
 		8109C9932A7C7EF40096DD64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8109C9922A7C7EF40096DD64 /* Preview Assets.xcassets */; };
+		8109C99A2A7C859B0096DD64 /* BMI-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C9992A7C859B0096DD64 /* BMI-View.swift */; };
+		8109C99D2A7D58CC0096DD64 /* BMI-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C99C2A7D58CC0096DD64 /* BMI-ViewModel.swift */; };
+		8109C99F2A7D59FB0096DD64 /* BMI-ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C99E2A7D59FB0096DD64 /* BMI-ViewComponents.swift */; };
+		81F9A9672A8191810093FAC7 /* BMI-ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */; };
+		81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */; };
+		81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A96A2A819A540093FAC7 /* MathView.swift */; };
+		81F9A96D2A819AE10093FAC7 /* Math-Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A96C2A819AE10093FAC7 /* Math-Button.swift */; };
+		81F9A9702A81CA290093FAC7 /* Love-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A96F2A81CA290093FAC7 /* Love-View.swift */; };
+		81F9A9722A81D0B90093FAC7 /* Love-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9712A81D0B90093FAC7 /* Love-ViewModel.swift */; };
+		81F9A9752A81D3E90093FAC7 /* Love-ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9742A81D3E90093FAC7 /* Love-ResultView.swift */; };
+		81F9A9772A81D7550093FAC7 /* Tip-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9762A81D7550093FAC7 /* Tip-View.swift */; };
+		81F9A9792A81D75B0093FAC7 /* Macro-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9782A81D75B0093FAC7 /* Macro-View.swift */; };
+		81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,19 @@
 		8109C98D2A7C7EF20096DD64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8109C98F2A7C7EF40096DD64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8109C9922A7C7EF40096DD64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8109C9992A7C859B0096DD64 /* BMI-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-View.swift"; sourceTree = "<group>"; };
+		8109C99C2A7D58CC0096DD64 /* BMI-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ViewModel.swift"; sourceTree = "<group>"; };
+		8109C99E2A7D59FB0096DD64 /* BMI-ViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ViewComponents.swift"; sourceTree = "<group>"; };
+		81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ResultView.swift"; sourceTree = "<group>"; };
+		81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-ViewComponents.swift"; sourceTree = "<group>"; };
+		81F9A96A2A819A540093FAC7 /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
+		81F9A96C2A819AE10093FAC7 /* Math-Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Math-Button.swift"; sourceTree = "<group>"; };
+		81F9A96F2A81CA290093FAC7 /* Love-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Love-View.swift"; sourceTree = "<group>"; };
+		81F9A9712A81D0B90093FAC7 /* Love-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Love-ViewModel.swift"; sourceTree = "<group>"; };
+		81F9A9742A81D3E90093FAC7 /* Love-ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Love-ResultView.swift"; sourceTree = "<group>"; };
+		81F9A9762A81D7550093FAC7 /* Tip-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip-View.swift"; sourceTree = "<group>"; };
+		81F9A9782A81D75B0093FAC7 /* Macro-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Macro-View.swift"; sourceTree = "<group>"; };
+		81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conversion-View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +78,14 @@
 			isa = PBXGroup;
 			children = (
 				8109C98B2A7C7EF20096DD64 /* CalculateItApp.swift */,
+				81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */,
 				8109C98D2A7C7EF20096DD64 /* ContentView.swift */,
+				81F9A9762A81D7550093FAC7 /* Tip-View.swift */,
+				81F9A9782A81D75B0093FAC7 /* Macro-View.swift */,
+				81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */,
+				81F9A9732A81D3540093FAC7 /* Love */,
+				81F9A96E2A819DB20093FAC7 /* Math */,
+				81F9A9652A818F520093FAC7 /* BMI */,
 				8109C98F2A7C7EF40096DD64 /* Assets.xcassets */,
 				8109C9912A7C7EF40096DD64 /* Preview Content */,
 			);
@@ -67,6 +100,36 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		81F9A9652A818F520093FAC7 /* BMI */ = {
+			isa = PBXGroup;
+			children = (
+				8109C9992A7C859B0096DD64 /* BMI-View.swift */,
+				81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */,
+				8109C99E2A7D59FB0096DD64 /* BMI-ViewComponents.swift */,
+				8109C99C2A7D58CC0096DD64 /* BMI-ViewModel.swift */,
+			);
+			path = BMI;
+			sourceTree = "<group>";
+		};
+		81F9A96E2A819DB20093FAC7 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				81F9A96A2A819A540093FAC7 /* MathView.swift */,
+				81F9A96C2A819AE10093FAC7 /* Math-Button.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		81F9A9732A81D3540093FAC7 /* Love */ = {
+			isa = PBXGroup;
+			children = (
+				81F9A96F2A81CA290093FAC7 /* Love-View.swift */,
+				81F9A9742A81D3E90093FAC7 /* Love-ResultView.swift */,
+				81F9A9712A81D0B90093FAC7 /* Love-ViewModel.swift */,
+			);
+			path = Love;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +140,7 @@
 				8109C9842A7C7EF20096DD64 /* Sources */,
 				8109C9852A7C7EF20096DD64 /* Frameworks */,
 				8109C9862A7C7EF20096DD64 /* Resources */,
+				8109C99B2A7C860D0096DD64 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -132,13 +196,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8109C99B2A7C860D0096DD64 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8109C9842A7C7EF20096DD64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F9A96D2A819AE10093FAC7 /* Math-Button.swift in Sources */,
+				81F9A9772A81D7550093FAC7 /* Tip-View.swift in Sources */,
+				81F9A9752A81D3E90093FAC7 /* Love-ResultView.swift in Sources */,
+				81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */,
+				8109C99A2A7C859B0096DD64 /* BMI-View.swift in Sources */,
+				81F9A9702A81CA290093FAC7 /* Love-View.swift in Sources */,
+				81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */,
 				8109C98E2A7C7EF20096DD64 /* ContentView.swift in Sources */,
+				81F9A9672A8191810093FAC7 /* BMI-ResultView.swift in Sources */,
 				8109C98C2A7C7EF20096DD64 /* CalculateItApp.swift in Sources */,
+				8109C99F2A7D59FB0096DD64 /* BMI-ViewComponents.swift in Sources */,
+				81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */,
+				8109C99D2A7D58CC0096DD64 /* BMI-ViewModel.swift in Sources */,
+				81F9A9722A81D0B90093FAC7 /* Love-ViewModel.swift in Sources */,
+				81F9A9792A81D75B0093FAC7 /* Macro-View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,23 +5,66 @@
 //  Created by Kimberly Brewer on 8/3/23.
 //
 // TODO: App Icon and Launch Screen
+// TODO: ADD COMMENTS
 
 import SwiftUI
 
 struct ContentView: View {
-    var calculators = ["math", "love", "bmi", "macro", "conversion", "tip"]
+    var calculators = [ "macro", "conversion", "tip"]
     var body: some View {
         NavigationView {
-            VStack {
-                ForEach(calculators, id: \.self) { calculator in
+            ZStack {
+                LinearGradient(
+                    colors: [.teal, .mint, .black],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                VStack {
+                    Text("Calculate It")
+                        .font(.title)
                     NavigationLink {
-                        EmptyView()
+                        BMIView()
                     } label: {
-                        Text(calculator.uppercased())
+                        Label("BMI", systemImage: "scalemass.fill")
+                            .modifier(HomeButton())
                     }
+                    NavigationLink {
+                        MathView()
+                    } label: {
+                        Label("Math", systemImage: "number")
+                            .modifier(HomeButton())
+                    }
+                    NavigationLink {
+                        LoveView()
+                    } label: {
+                        Label("LoveScore", systemImage: "heart.circle.fill")
+                            .modifier(HomeButton())
+                    }
+                    NavigationLink {
+                        LoveView()
+                    } label: {
+                        Label("LoveScore", systemImage: "heart.circle.fill")
+                            .modifier(HomeButton())
+                    }
+                    NavigationLink {
+                        LoveView()
+                    } label: {
+                        Label("LoveScore", systemImage: "heart.circle.fill")
+                            .modifier(HomeButton())
+                    }
+                    NavigationLink {
+                        LoveView()
+                    } label: {
+                        Label("LoveScore", systemImage: "heart.circle.fill")
+                            .modifier(HomeButton())
+                    }
+
+ 
                 }
+                .padding()
             }
-            .padding()
+
         }
     }
 }
