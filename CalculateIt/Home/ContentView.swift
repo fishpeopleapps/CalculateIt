@@ -10,7 +10,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    var calculators = [ "macro", "conversion", "tip"]
     var body: some View {
         NavigationView {
             ZStack {
@@ -21,8 +20,6 @@ struct ContentView: View {
                 )
                 .ignoresSafeArea()
                 VStack {
-                    Text("Calculate It")
-                        .font(.title)
                     NavigationLink {
                         BMIView()
                     } label: {
@@ -42,29 +39,27 @@ struct ContentView: View {
                             .modifier(HomeButton())
                     }
                     NavigationLink {
-                        LoveView()
+                        ConversionView()
                     } label: {
-                        Label("LoveScore", systemImage: "heart.circle.fill")
+                        Label("Conversion", systemImage: "arrow.left.arrow.right")
                             .modifier(HomeButton())
                     }
                     NavigationLink {
-                        LoveView()
+                        MacroView()
                     } label: {
-                        Label("LoveScore", systemImage: "heart.circle.fill")
+                        Label("Macros", systemImage: "birthday.cake.fill")
                             .modifier(HomeButton())
                     }
                     NavigationLink {
-                        LoveView()
+                        TipView()
                     } label: {
-                        Label("LoveScore", systemImage: "heart.circle.fill")
+                        Label("Calculate Tip", systemImage: "cup.and.saucer.fill")
                             .modifier(HomeButton())
                     }
-
- 
                 }
                 .padding()
             }
-
+            .navigationTitle("CalculateIt")
         }
     }
 }

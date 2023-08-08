@@ -24,6 +24,8 @@
 		81F9A9772A81D7550093FAC7 /* Tip-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9762A81D7550093FAC7 /* Tip-View.swift */; };
 		81F9A9792A81D75B0093FAC7 /* Macro-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9782A81D75B0093FAC7 /* Macro-View.swift */; };
 		81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */; };
+		81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9A82A82DDF10093FAC7 /* Tip-ViewModel.swift */; };
+		81F9A9AC2A82E5DB0093FAC7 /* Macro-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9AB2A82E5DB0093FAC7 /* Macro-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		81F9A9762A81D7550093FAC7 /* Tip-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip-View.swift"; sourceTree = "<group>"; };
 		81F9A9782A81D75B0093FAC7 /* Macro-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Macro-View.swift"; sourceTree = "<group>"; };
 		81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conversion-View.swift"; sourceTree = "<group>"; };
+		81F9A9A82A82DDF10093FAC7 /* Tip-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip-ViewModel.swift"; sourceTree = "<group>"; };
+		81F9A9AB2A82E5DB0093FAC7 /* Macro-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Macro-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				8109C98B2A7C7EF20096DD64 /* CalculateItApp.swift */,
-				81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */,
-				8109C98D2A7C7EF20096DD64 /* ContentView.swift */,
-				81F9A9762A81D7550093FAC7 /* Tip-View.swift */,
-				81F9A9782A81D75B0093FAC7 /* Macro-View.swift */,
+				81F9A97C2A81D9590093FAC7 /* Home */,
+				81F9A9AA2A82E07A0093FAC7 /* Tip */,
+				81F9A9AD2A82EC7C0093FAC7 /* Macros */,
 				81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */,
 				81F9A9732A81D3540093FAC7 /* Love */,
 				81F9A96E2A819DB20093FAC7 /* Math */,
@@ -128,6 +131,33 @@
 				81F9A9712A81D0B90093FAC7 /* Love-ViewModel.swift */,
 			);
 			path = Love;
+			sourceTree = "<group>";
+		};
+		81F9A97C2A81D9590093FAC7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */,
+				8109C98D2A7C7EF20096DD64 /* ContentView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		81F9A9AA2A82E07A0093FAC7 /* Tip */ = {
+			isa = PBXGroup;
+			children = (
+				81F9A9762A81D7550093FAC7 /* Tip-View.swift */,
+				81F9A9A82A82DDF10093FAC7 /* Tip-ViewModel.swift */,
+			);
+			path = Tip;
+			sourceTree = "<group>";
+		};
+		81F9A9AD2A82EC7C0093FAC7 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				81F9A9782A81D75B0093FAC7 /* Macro-View.swift */,
+				81F9A9AB2A82E5DB0093FAC7 /* Macro-ViewModel.swift */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +257,7 @@
 				81F9A9772A81D7550093FAC7 /* Tip-View.swift in Sources */,
 				81F9A9752A81D3E90093FAC7 /* Love-ResultView.swift in Sources */,
 				81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */,
+				81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */,
 				8109C99A2A7C859B0096DD64 /* BMI-View.swift in Sources */,
 				81F9A9702A81CA290093FAC7 /* Love-View.swift in Sources */,
 				81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */,
@@ -237,6 +268,7 @@
 				81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */,
 				8109C99D2A7D58CC0096DD64 /* BMI-ViewModel.swift in Sources */,
 				81F9A9722A81D0B90093FAC7 /* Love-ViewModel.swift in Sources */,
+				81F9A9AC2A82E5DB0093FAC7 /* Macro-ViewModel.swift in Sources */,
 				81F9A9792A81D75B0093FAC7 /* Macro-View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

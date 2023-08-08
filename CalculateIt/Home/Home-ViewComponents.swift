@@ -11,12 +11,11 @@ struct HomeButton: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundStyle(.white)
-            .font(.title)
-            .padding(.horizontal)
-            .padding(.vertical, 7)
+            .font(.title2)
+            .frame(width: 240, height: 45)
             .background(.black)
             .cornerRadius(15)
-            .shadow(color: .blue, radius: 2)
+            .shadow(color: .mint, radius: 2)
     }
 }
 
