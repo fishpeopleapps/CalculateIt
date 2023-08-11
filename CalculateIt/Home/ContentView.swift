@@ -6,7 +6,7 @@
 //
 // TODO: App Icon and Launch Screen
 // TODO: ADD COMMENTS
-
+// TODO: Improve UI
 import SwiftUI
 
 struct ContentView: View {

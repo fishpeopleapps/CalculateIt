@@ -26,8 +26,10 @@ class MacroViewModel: ObservableObject {
             var partThree = 4.7 * Double(userAge)
             return Double(655.1 + partOne + (partTwo) - (partThree))
         } else {
-            return 0.0
-          //  return Double(66 + (6.2 * userWeight) + (12.7 * totalUserInches) - (6.76 * userAge))
+            var part1 = 6.2 * Double(userWeight)
+            var part2 = 12.7 * totalUserInches
+            var part3 = 6.76 * Double(userAge)
+            return Double(66 + (part1) + (part2) - (part3))
         }
     }
     var tdee: Int {

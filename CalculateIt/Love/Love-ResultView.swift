@@ -10,7 +10,21 @@ import SwiftUI
 struct LoveResultView: View {
     @State var score: Int
     var body: some View {
-        Text("Your love score is \(score)")
+        ZStack {
+            Text(loveScoreResult(score: score))
+        }
+        
+    }
+    func loveScoreResult(score: Int) -> String {
+        if score < 21 {
+            return "I don't think you're going to make it"
+        } else if score < 71 {
+            return "Could go either way"
+        } else if score < 91 {
+            return "You stand a fighting chance"
+        } else {
+            return "You were made for each other!"
+        }
     }
 }
 

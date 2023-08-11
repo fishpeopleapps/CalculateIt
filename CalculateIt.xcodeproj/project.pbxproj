@@ -14,6 +14,8 @@
 		8109C99A2A7C859B0096DD64 /* BMI-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C9992A7C859B0096DD64 /* BMI-View.swift */; };
 		8109C99D2A7D58CC0096DD64 /* BMI-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C99C2A7D58CC0096DD64 /* BMI-ViewModel.swift */; };
 		8109C99F2A7D59FB0096DD64 /* BMI-ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C99E2A7D59FB0096DD64 /* BMI-ViewComponents.swift */; };
+		8111417E2A86EBF600F29CC6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8111417D2A86EBF600F29CC6 /* RatingView.swift */; };
+		811141802A86F5F300F29CC6 /* FontInLove.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8111417F2A86F5F300F29CC6 /* FontInLove.otf */; };
 		81F9A9672A8191810093FAC7 /* BMI-ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */; };
 		81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */; };
 		81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A96A2A819A540093FAC7 /* MathView.swift */; };
@@ -37,6 +39,9 @@
 		8109C9992A7C859B0096DD64 /* BMI-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-View.swift"; sourceTree = "<group>"; };
 		8109C99C2A7D58CC0096DD64 /* BMI-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ViewModel.swift"; sourceTree = "<group>"; };
 		8109C99E2A7D59FB0096DD64 /* BMI-ViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ViewComponents.swift"; sourceTree = "<group>"; };
+		8111417D2A86EBF600F29CC6 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		8111417F2A86F5F300F29CC6 /* FontInLove.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontInLove.otf; sourceTree = "<group>"; };
+		811141822A86F60E00F29CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ResultView.swift"; sourceTree = "<group>"; };
 		81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-ViewComponents.swift"; sourceTree = "<group>"; };
 		81F9A96A2A819A540093FAC7 /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
@@ -81,6 +86,8 @@
 		8109C98A2A7C7EF20096DD64 /* CalculateIt */ = {
 			isa = PBXGroup;
 			children = (
+				811141822A86F60E00F29CC6 /* Info.plist */,
+				811141812A86F5F700F29CC6 /* Fonts */,
 				8109C98B2A7C7EF20096DD64 /* CalculateItApp.swift */,
 				81F9A97C2A81D9590093FAC7 /* Home */,
 				81F9A9AA2A82E07A0093FAC7 /* Tip */,
@@ -101,6 +108,14 @@
 				8109C9922A7C7EF40096DD64 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		811141812A86F5F700F29CC6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8111417F2A86F5F300F29CC6 /* FontInLove.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		81F9A9652A818F520093FAC7 /* BMI */ = {
@@ -145,6 +160,7 @@
 		81F9A9AA2A82E07A0093FAC7 /* Tip */ = {
 			isa = PBXGroup;
 			children = (
+				8111417D2A86EBF600F29CC6 /* RatingView.swift */,
 				81F9A9762A81D7550093FAC7 /* Tip-View.swift */,
 				81F9A9A82A82DDF10093FAC7 /* Tip-ViewModel.swift */,
 			);
@@ -220,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8109C9932A7C7EF40096DD64 /* Preview Assets.xcassets in Resources */,
+				811141802A86F5F300F29CC6 /* FontInLove.otf in Resources */,
 				8109C9902A7C7EF40096DD64 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +273,7 @@
 				81F9A96D2A819AE10093FAC7 /* Math-Button.swift in Sources */,
 				81F9A9772A81D7550093FAC7 /* Tip-View.swift in Sources */,
 				81F9A9752A81D3E90093FAC7 /* Love-ResultView.swift in Sources */,
+				8111417E2A86EBF600F29CC6 /* RatingView.swift in Sources */,
 				81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */,
 				81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */,
 				8109C99A2A7C859B0096DD64 /* BMI-View.swift in Sources */,
@@ -401,6 +419,7 @@
 				DEVELOPMENT_TEAM = Q73WC8F3KU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalculateIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,6 +449,7 @@
 				DEVELOPMENT_TEAM = Q73WC8F3KU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalculateIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

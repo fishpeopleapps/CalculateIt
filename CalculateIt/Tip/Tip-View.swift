@@ -5,37 +5,69 @@
 //  Created by Kimberly Brewer on 8/7/23.
 //
 // TODO: Improve UI
-// TODO: Include PSA on the states that suck
 import SwiftUI
 
 struct TipView: View {
     @StateObject var tip = TipViewModel()
-
+    private var stateInitials = "AL, GA, MS, SC, or TN"
+    @State private var whyMatters = false
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    // Get the subtotal bill
-                    Text("Enter the sub total:")
-                    TextField("Amount", value: $tip.billTotal, format: .currency(code: "USD"))
-                        .keyboardType(.numberPad)
-
-                }
-                Section {
-                    // determine which state the user lives in
-                    Toggle("In AL, GA, MS, SC, or TN?", isOn: $tip.userState)
-                    // rate the service
-                    Picker("Rate the service:", selection: $tip.rating) {
-                        ForEach(0..<6) {
-                            Text("\($0)")
-                        }
+                    HStack {
+                        // Get the subtotal bill
+                        Text("Total Before Tax:")
+                        Spacer()
+                        TextField("Amount", value: $tip.subTotal, format: .currency(code: "USD"))
+                            .keyboardType(.numberPad)
+                            .frame(width: 100)
+                            .multilineTextAlignment(.trailing)
                     }
-                    Text("(Select '0' if it was a pick-up order)")
+                    HStack {
+                        // Get the subtotal bill
+                        Text("Total After Tax:")
+                        Spacer()
+                        TextField("Amount", value: $tip.fullTotal, format: .currency(code: "USD"))
+                            .keyboardType(.numberPad)
+                            .frame(width: 100)
+                            .multilineTextAlignment(.trailing)
+                    }
+                    HStack {
+                        Text("Rate the service:")
+                        Spacer()
+                        // rate the service
+                        RatingView(tipVM: tip)
+                    }
                 }
                 Section {
-                    Text("Here is your total including tip $\(tip.total, specifier: "%.2f")")
+                        // determine which state the user lives in
+                        Toggle("\(stateInitials)", isOn: $tip.userState)
+                    Button("read why it matters") {
+                        withAnimation { whyMatters.toggle() }
+                    }
+                    if whyMatters {
+                        Text(tip.cheapReason)
+                            .multilineTextAlignment(.leading)
+                    }
+                } header: {
+                    Text("Are you in one of these states?")
+                }
+                Section {
+                    HStack {
+                        Spacer()
+                        Text("$\(tip.total, specifier: "%.2f")")
+                            .font(.title3).bold()
+                        Spacer()
+                    }
+                } header: {
+                    Text("Your Total")
+                        .font(.title2)
+                } footer: {
+                    Text("that's a total tip of $\(tip.justTheTip, specifier: "%.2f")")
                 }
             }
+            .navigationTitle("Tip Calculator")
         }
     }
 }
