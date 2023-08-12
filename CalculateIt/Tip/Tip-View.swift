@@ -13,61 +13,69 @@ struct TipView: View {
     @State private var whyMatters = false
     var body: some View {
         NavigationView {
-            Form {
-                Section {
-                    HStack {
-                        // Get the subtotal bill
-                        Text("Total Before Tax:")
-                        Spacer()
-                        TextField("Amount", value: $tip.subTotal, format: .currency(code: "USD"))
-                            .keyboardType(.numberPad)
-                            .frame(width: 100)
-                            .multilineTextAlignment(.trailing)
+            ZStack {
+                RadialGradient(colors: [.mint,  .indigo], center: .topLeading, startRadius: 125, endRadius: 750)
+                    .ignoresSafeArea()
+                Form {
+                    Section {
+                        HStack {
+                            // Get the subtotal bill
+                            Text("Total Before Tax:")
+                            Spacer()
+                            TextField("Amount", value: $tip.subTotal, format: .currency(code: "USD"))
+                                .keyboardType(.numberPad)
+                                .frame(width: 100)
+                                .multilineTextAlignment(.trailing)
+                        }
+                        HStack {
+                            // Get the subtotal bill
+                            Text("Total After Tax:")
+                            Spacer()
+                            TextField("Amount", value: $tip.fullTotal, format: .currency(code: "USD"))
+                                .keyboardType(.numberPad)
+                                .frame(width: 100)
+                                .multilineTextAlignment(.trailing)
+                        }
+                        HStack {
+                            Text("Rate the service:")
+                            Spacer()
+                            // rate the service
+                            RatingView(tipVM: tip)
+                        }
                     }
-                    HStack {
-                        // Get the subtotal bill
-                        Text("Total After Tax:")
-                        Spacer()
-                        TextField("Amount", value: $tip.fullTotal, format: .currency(code: "USD"))
-                            .keyboardType(.numberPad)
-                            .frame(width: 100)
-                            .multilineTextAlignment(.trailing)
+                    Section {
+                            // determine which state the user lives in
+                            Toggle("\(stateInitials)", isOn: $tip.userState)
+                        Button("read why it matters") {
+                            withAnimation { whyMatters.toggle() }
+                        }
+                        if whyMatters {
+                            Text(tip.cheapReason)
+                                .multilineTextAlignment(.leading)
+                        }
+                    } header: {
+                        Text("Are you in one of these states?")
                     }
-                    HStack {
-                        Text("Rate the service:")
-                        Spacer()
-                        // rate the service
-                        RatingView(tipVM: tip)
+                    Section {
+                        HStack {
+                            Spacer()
+                            Text("$\(tip.total, specifier: "%.2f")")
+                                .font(.title3).bold()
+                            Spacer()
+                        }
+                    } header: {
+                        Text("Your Total")
+                            .font(.title2)
+                    } footer: {
+                        Text("that's a total tip of $\(tip.justTheTip, specifier: "%.2f")")
+                            .foregroundColor(.white.opacity(0.72))
                     }
+                    
                 }
-                Section {
-                        // determine which state the user lives in
-                        Toggle("\(stateInitials)", isOn: $tip.userState)
-                    Button("read why it matters") {
-                        withAnimation { whyMatters.toggle() }
-                    }
-                    if whyMatters {
-                        Text(tip.cheapReason)
-                            .multilineTextAlignment(.leading)
-                    }
-                } header: {
-                    Text("Are you in one of these states?")
-                }
-                Section {
-                    HStack {
-                        Spacer()
-                        Text("$\(tip.total, specifier: "%.2f")")
-                            .font(.title3).bold()
-                        Spacer()
-                    }
-                } header: {
-                    Text("Your Total")
-                        .font(.title2)
-                } footer: {
-                    Text("that's a total tip of $\(tip.justTheTip, specifier: "%.2f")")
-                }
+                .scrollContentBackground(.hidden)
+                .navigationTitle("Tip Calculator")
             }
-            .navigationTitle("Tip Calculator")
+
         }
     }
 }

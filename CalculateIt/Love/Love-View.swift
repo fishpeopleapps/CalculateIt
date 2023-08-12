@@ -16,7 +16,7 @@ struct LoveView: View {
                 VStack {
                     Text("Love Calculator")
                         .foregroundColor(.white)
-                        .font(.custom("HeartsForAll", size: 60)) // TODO: this isn't working
+                        .font(.custom("HeartsForAll", size: 60)) 
                     Spacer()
                     HStack {
                         Text("Enter your name:")

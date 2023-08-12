@@ -16,6 +16,8 @@
 		8109C99F2A7D59FB0096DD64 /* BMI-ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109C99E2A7D59FB0096DD64 /* BMI-ViewComponents.swift */; };
 		8111417E2A86EBF600F29CC6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8111417D2A86EBF600F29CC6 /* RatingView.swift */; };
 		811141802A86F5F300F29CC6 /* FontInLove.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8111417F2A86F5F300F29CC6 /* FontInLove.otf */; };
+		815E926B2A880D90006166C4 /* ActivityTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E926A2A880D90006166C4 /* ActivityTypes.swift */; };
+		815E926F2A881BB5006166C4 /* Macro-DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E926E2A881BB5006166C4 /* Macro-DetailView.swift */; };
 		81F9A9672A8191810093FAC7 /* BMI-ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */; };
 		81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */; };
 		81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A96A2A819A540093FAC7 /* MathView.swift */; };
@@ -42,6 +44,8 @@
 		8111417D2A86EBF600F29CC6 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		8111417F2A86F5F300F29CC6 /* FontInLove.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontInLove.otf; sourceTree = "<group>"; };
 		811141822A86F60E00F29CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		815E926A2A880D90006166C4 /* ActivityTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypes.swift; sourceTree = "<group>"; };
+		815E926E2A881BB5006166C4 /* Macro-DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Macro-DetailView.swift"; sourceTree = "<group>"; };
 		81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ResultView.swift"; sourceTree = "<group>"; };
 		81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-ViewComponents.swift"; sourceTree = "<group>"; };
 		81F9A96A2A819A540093FAC7 /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
@@ -87,8 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				811141822A86F60E00F29CC6 /* Info.plist */,
-				811141812A86F5F700F29CC6 /* Fonts */,
 				8109C98B2A7C7EF20096DD64 /* CalculateItApp.swift */,
+				811141812A86F5F700F29CC6 /* Fonts */,
 				81F9A97C2A81D9590093FAC7 /* Home */,
 				81F9A9AA2A82E07A0093FAC7 /* Tip */,
 				81F9A9AD2A82EC7C0093FAC7 /* Macros */,
@@ -171,7 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				81F9A9782A81D75B0093FAC7 /* Macro-View.swift */,
+				815E926E2A881BB5006166C4 /* Macro-DetailView.swift */,
 				81F9A9AB2A82E5DB0093FAC7 /* Macro-ViewModel.swift */,
+				815E926A2A880D90006166C4 /* ActivityTypes.swift */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */,
 				81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */,
 				8109C99A2A7C859B0096DD64 /* BMI-View.swift in Sources */,
+				815E926B2A880D90006166C4 /* ActivityTypes.swift in Sources */,
 				81F9A9702A81CA290093FAC7 /* Love-View.swift in Sources */,
 				81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */,
 				8109C98E2A7C7EF20096DD64 /* ContentView.swift in Sources */,
@@ -285,6 +292,7 @@
 				8109C99F2A7D59FB0096DD64 /* BMI-ViewComponents.swift in Sources */,
 				81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */,
 				8109C99D2A7D58CC0096DD64 /* BMI-ViewModel.swift in Sources */,
+				815E926F2A881BB5006166C4 /* Macro-DetailView.swift in Sources */,
 				81F9A9722A81D0B90093FAC7 /* Love-ViewModel.swift in Sources */,
 				81F9A9AC2A82E5DB0093FAC7 /* Macro-ViewModel.swift in Sources */,
 				81F9A9792A81D75B0093FAC7 /* Macro-View.swift in Sources */,

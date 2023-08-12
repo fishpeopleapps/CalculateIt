@@ -6,50 +6,73 @@
 //
 
 import Foundation
+import SwiftUI
 
 class MacroViewModel: ObservableObject {
-    @Published var userGender = ""
+    @Published var userGender = "female"
     @Published var userWeight = 0
     @Published var userHeightInFeet = 5
     @Published var userHeightInInches = 5
     @Published var userAge = 30
-    @Published var userActivityLevel = ""
+    @Published var userActivity: ActivityType = .medium
     let genders = ["male", "female"]
-    let activityLevels = ["sedentary", "light", "moderate", "heavy", "extreme"]
     var totalUserInches: Double {
         Double(userHeightInFeet * 12 + userHeightInInches)
     }
     var bmr: Double {
         if userGender == "female" {
-            var partOne = 4.35 * Double(userWeight)
-            var partTwo = 4.7 * totalUserInches
-            var partThree = 4.7 * Double(userAge)
+            let partOne = 4.35 * Double(userWeight)
+            let partTwo = 4.7 * totalUserInches
+            let partThree = 4.7 * Double(userAge)
             return Double(655.1 + partOne + (partTwo) - (partThree))
         } else {
-            var part1 = 6.2 * Double(userWeight)
-            var part2 = 12.7 * totalUserInches
-            var part3 = 6.76 * Double(userAge)
+            let part1 = 6.2 * Double(userWeight)
+            let part2 = 12.7 * totalUserInches
+            let part3 = 6.76 * Double(userAge)
             return Double(66 + (part1) + (part2) - (part3))
         }
     }
-    var tdee: Int {
-        if userActivityLevel == "sedentary" {
+    func getTDEE(activityLevel: ActivityType) -> Int {
+        switch activityLevel {
+        case .none:
             return Int(bmr * 1.2)
-        } else if userActivityLevel == "light" {
+        case .light:
             return Int(bmr * 1.375)
-        } else if userActivityLevel == "moderate" {
+        case .medium:
             return Int(bmr * 1.55)
-        } else if userActivityLevel == "heavy" {
+        case .heavy:
             return Int(bmr * 1.725)
-        } else if userActivityLevel == "extreme" {
+        case .intense:
             return Int(bmr * 1.9)
         }
-        return 1
+    }
+    var userTDEE: Int {
+        getTDEE(activityLevel: userActivity)
     }
     // TODO: add a bool for if they lift weights, or are trying to lose weight
-    // then we have to calculate macros
     // best vegan macros include:
     // 20% protein ~ 4 cals per gram
+    var protein: Int {
+        Int((Double(userTDEE) * 0.20) / 4)
+    }
     // 55% carbs ~ 4 cals per gram
+    var carbohydrates: Int {
+        Int((Double(userTDEE) * 0.55) / 4)
+    }
     // 25% fat ~ 9 cals per gram
+    var fat: Int {
+        Int((Double(userTDEE) * 0.25) / 9)
+    }
+    // TODO: Get this to work so the numbers animate when they move up
+//    struct CountingText: View, Animatable {
+//        var value: Double
+//        var fractionLength = 0
+//        var animatableData: Double {
+//            get { value }
+//            set { value = newValue }
+//        }
+//        var body: some View {
+//            Text("\(value.formatted(.number.precision(.fractionLength(fractionLength))))")
+//        }
+//    }
 }
