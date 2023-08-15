@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MacroDetailView: View {
-    @ObservedObject var macros = MacroViewModel()
+    @ObservedObject var macros: MacroViewModel
     var body: some View {
         VStack(spacing: 20) {
             Text("\(macros.userTDEE)")
@@ -27,6 +27,6 @@ struct MacroDetailView: View {
 
 struct MacroDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MacroDetailView()
+        MacroDetailView(macros: MacroViewModel())
     }
 }

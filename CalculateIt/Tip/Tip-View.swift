@@ -14,7 +14,7 @@ struct TipView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                RadialGradient(colors: [.mint,  .indigo], center: .topLeading, startRadius: 125, endRadius: 750)
+                RadialGradient(colors: [.mint, .indigo], center: .topLeading, startRadius: 125, endRadius: 750)
                     .ignoresSafeArea()
                 Form {
                     Section {
@@ -70,7 +70,6 @@ struct TipView: View {
                         Text("that's a total tip of $\(tip.justTheTip, specifier: "%.2f")")
                             .foregroundColor(.white.opacity(0.72))
                     }
-                    
                 }
                 .scrollContentBackground(.hidden)
                 .navigationTitle("Tip Calculator")

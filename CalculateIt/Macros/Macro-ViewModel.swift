@@ -49,7 +49,7 @@ class MacroViewModel: ObservableObject {
     var userTDEE: Int {
         getTDEE(activityLevel: userActivity)
     }
-    // TODO: add a bool for if they lift weights, or are trying to lose weight
+    // TODO: Make it so they can change these percentages
     // best vegan macros include:
     // 20% protein ~ 4 cals per gram
     var protein: Int {
@@ -64,15 +64,18 @@ class MacroViewModel: ObservableObject {
         Int((Double(userTDEE) * 0.25) / 9)
     }
     // TODO: Get this to work so the numbers animate when they move up
-//    struct CountingText: View, Animatable {
-//        var value: Double
-//        var fractionLength = 0
-//        var animatableData: Double {
-//            get { value }
-//            set { value = newValue }
-//        }
-//        var body: some View {
-//            Text("\(value.formatted(.number.precision(.fractionLength(fractionLength))))")
-//        }
-//    }
+    /// I think it will have something to do with .onChange(of: value) { newVAlue in
+    /// CountingText(value: newValue
+    /// // wait where's my text?
+    struct CountingText: View, Animatable {
+        var value: Double
+        var fractionLength = 0
+        var animatableData: Double {
+            get { value }
+            set { value = newValue }
+        }
+        var body: some View {
+            Text("\(value.formatted(.number.precision(.fractionLength(fractionLength))))")
+        }
+    }
 }

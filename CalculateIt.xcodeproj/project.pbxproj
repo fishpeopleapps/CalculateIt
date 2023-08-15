@@ -18,6 +18,10 @@
 		811141802A86F5F300F29CC6 /* FontInLove.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8111417F2A86F5F300F29CC6 /* FontInLove.otf */; };
 		815E926B2A880D90006166C4 /* ActivityTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E926A2A880D90006166C4 /* ActivityTypes.swift */; };
 		815E926F2A881BB5006166C4 /* Macro-DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E926E2A881BB5006166C4 /* Macro-DetailView.swift */; };
+		818A79EF2A8C0B0D00BBA3AD /* BricolageGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 818A79EC2A8C0B0D00BBA3AD /* BricolageGrotesque-Regular.ttf */; };
+		818A79F02A8C0B0D00BBA3AD /* BricolageGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 818A79ED2A8C0B0D00BBA3AD /* BricolageGrotesque-Medium.ttf */; };
+		818A79F12A8C0B0D00BBA3AD /* BricolageGrotesque-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 818A79EE2A8C0B0D00BBA3AD /* BricolageGrotesque-Light.ttf */; };
+		818A79F32A8C159B00BBA3AD /* Home-NavButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818A79F22A8C159B00BBA3AD /* Home-NavButtons.swift */; };
 		81F9A9672A8191810093FAC7 /* BMI-ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */; };
 		81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */; };
 		81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A96A2A819A540093FAC7 /* MathView.swift */; };
@@ -46,6 +50,10 @@
 		811141822A86F60E00F29CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		815E926A2A880D90006166C4 /* ActivityTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypes.swift; sourceTree = "<group>"; };
 		815E926E2A881BB5006166C4 /* Macro-DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Macro-DetailView.swift"; sourceTree = "<group>"; };
+		818A79EC2A8C0B0D00BBA3AD /* BricolageGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BricolageGrotesque-Regular.ttf"; sourceTree = "<group>"; };
+		818A79ED2A8C0B0D00BBA3AD /* BricolageGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BricolageGrotesque-Medium.ttf"; sourceTree = "<group>"; };
+		818A79EE2A8C0B0D00BBA3AD /* BricolageGrotesque-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BricolageGrotesque-Light.ttf"; sourceTree = "<group>"; };
+		818A79F22A8C159B00BBA3AD /* Home-NavButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-NavButtons.swift"; sourceTree = "<group>"; };
 		81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ResultView.swift"; sourceTree = "<group>"; };
 		81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-ViewComponents.swift"; sourceTree = "<group>"; };
 		81F9A96A2A819A540093FAC7 /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
@@ -118,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				8111417F2A86F5F300F29CC6 /* FontInLove.otf */,
+				818A79EE2A8C0B0D00BBA3AD /* BricolageGrotesque-Light.ttf */,
+				818A79ED2A8C0B0D00BBA3AD /* BricolageGrotesque-Medium.ttf */,
+				818A79EC2A8C0B0D00BBA3AD /* BricolageGrotesque-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				81F9A9682A8196E00093FAC7 /* Home-ViewComponents.swift */,
+				818A79F22A8C159B00BBA3AD /* Home-NavButtons.swift */,
 				8109C98D2A7C7EF20096DD64 /* ContentView.swift */,
 			);
 			path = Home;
@@ -241,8 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818A79EF2A8C0B0D00BBA3AD /* BricolageGrotesque-Regular.ttf in Resources */,
+				818A79F02A8C0B0D00BBA3AD /* BricolageGrotesque-Medium.ttf in Resources */,
 				8109C9932A7C7EF40096DD64 /* Preview Assets.xcassets in Resources */,
 				811141802A86F5F300F29CC6 /* FontInLove.otf in Resources */,
+				818A79F12A8C0B0D00BBA3AD /* BricolageGrotesque-Light.ttf in Resources */,
 				8109C9902A7C7EF40096DD64 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +299,7 @@
 				81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */,
 				8109C99A2A7C859B0096DD64 /* BMI-View.swift in Sources */,
 				815E926B2A880D90006166C4 /* ActivityTypes.swift in Sources */,
+				818A79F32A8C159B00BBA3AD /* Home-NavButtons.swift in Sources */,
 				81F9A9702A81CA290093FAC7 /* Love-View.swift in Sources */,
 				81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */,
 				8109C98E2A7C7EF20096DD64 /* ContentView.swift in Sources */,

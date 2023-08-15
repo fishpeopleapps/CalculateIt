@@ -61,6 +61,7 @@ struct MacroView: View {
                     Section {
                         // you should have BMR at this point
                         Text("Your BMR is \(macros.bmr.formatted(.number.precision(.fractionLength(0))))")
+                            
                     } header: {
                         Text("Your BMR")
                     }
