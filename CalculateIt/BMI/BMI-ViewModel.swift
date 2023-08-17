@@ -21,4 +21,10 @@ class BMIViewModel: ObservableObject {
     func calcBMI(weight: Double, height: Double) -> Double {
         (weight / (height * height)) * 703 // needs to be rounded to 1 decimal place
     }
+    var hasValidEntries: Bool {
+        if userWeight.isLess(than: 30) || userHeightInInches > 11 || userHeightInFeet < 3 || userHeightInFeet > 7 {
+            return false
+        }
+        return true
+    }
 }

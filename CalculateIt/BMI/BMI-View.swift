@@ -4,8 +4,8 @@
 //
 //  Created by Kimberly Brewer on 8/3/23.
 //
-// TODO: Add guard statements so users can't enter stupid information
-// TODO: UI
+// TODO: Below
+/// a toggle to switch to metric
 
 import SwiftUI
 
@@ -13,50 +13,83 @@ struct BMIView: View {
     @StateObject var bmi = BMIViewModel()
     var bmiComponents = BMIViewComponents()
     @State private var displayBMI = false
+    @State private var isShowingAlert = false
     var body: some View {
-        VStack {
-            bmiComponents.warning
-            Spacer()
-            HStack {
-                Text("Pounds:")
-                TextField("Weight", value: $bmi.userWeight, format: .number)
-                    .keyboardType(.numberPad)
-                    .frame(width: 100)
-                    .textFieldStyle(.roundedBorder)
-            }
-            HStack {
-                Text("Feet:")
-                TextField("feet", value: $bmi.userHeightInFeet, format: .number)
-                    .keyboardType(.numberPad)
-                    .frame(width: 80)
-                    .textFieldStyle(.roundedBorder)
-                Text("Inches:")
-                TextField("inches", value: $bmi.userHeightInInches, format: .number)
-                    .keyboardType(.numberPad)
-                    .frame(width: 80)
-                    .textFieldStyle(.roundedBorder)
-            }
-            VStack {
-                NavigationLink {
-                    BMIResultView(userBMI: bmi.userBMI)
-                } label: {
-                    Text("Calculate BMI")
-                        .padding()
-                        .cornerRadius(15)
-                        .foregroundStyle(Color.white)
-                        .background(.blue.gradient)
+        GeometryReader { geo in
+        ZStack {
+            bmiComponents.background
+                VStack {
+                    // Holds the title
+                    VStack(alignment: .center) {
+                        bmiComponents.title
+                        bmiComponents.subTitle
+                    }
+                    .frame(width: geo.size.width * 1.0, height: geo.size.height * 0.25)
+                    // Holds the User Information
+                    ZStack {
+                        bmiComponents.bmiRectangle
+                        VStack {
+                            bmiComponents.userTitle
+                            HStack {
+                                StatBox(text: "Pounds:")
+                                TextField("Weight", value: $bmi.userWeight, format: .number)
+                                    .keyboardType(.numberPad)
+                                    .frame(width: 100)
+                                    .textFieldStyle(.roundedBorder)
+                            }
+                            HStack {
+                                StatBox(text: "Feet:")
+                                TextField("feet", value: $bmi.userHeightInFeet, format: .number)
+                                    .keyboardType(.numberPad)
+                                    .frame(width: 80)
+                                    .textFieldStyle(.roundedBorder)
+                                StatBox(text: "Inches")
+                                TextField("inches", value: $bmi.userHeightInInches, format: .number)
+                                    .keyboardType(.numberPad)
+                                    .frame(width: 80)
+                                    .textFieldStyle(.roundedBorder)
+                            }
+                        }
+                    }
+                    .frame(width: geo.size.width * 1.0, height: geo.size.height * 0.25)
+                    // Holds the Results Button
+                    VStack {
+                        NavigationLink {
+                            BMIResultView(userBMI: bmi.userBMI)
+                        } label: {
+                            bmiComponents.getYourResults
+                                .padding(.horizontal, 20)
+                        }
+                        if bmi.hasValidEntries == false {
+                            bmiComponents.disclaimerText
+                        }
+                    }
+                    .disabled(bmi.hasValidEntries == false)
+                    .frame(width: geo.size.width * 1.0, height: geo.size.height * 0.25)
+                    .onTapGesture {
+                        displayBMI.toggle()
+                    }
+                    Spacer()
                 }
-
-//                if displayBMI {
-//                    Text("\(bmi.userBMI, specifier: "%.1f")")
-//                }
-                Spacer()
-            }
-            .onTapGesture {
-                displayBMI.toggle()
+                .sheet(isPresented: $isShowingAlert) {
+                    BMIWarningView()
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            isShowingAlert.toggle()
+                        } label: {
+                            bmiComponents.alertIcon
+                        }
+                    }
+                }
             }
         }
-        .padding()
     }
+}
 
+struct BMIView_Previews: PreviewProvider {
+    static var previews: some View {
+        BMIView()
+    }
 }

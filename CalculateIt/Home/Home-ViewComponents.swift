@@ -22,7 +22,7 @@ struct HomeComponents {
     // TODO: I need to be fixed to be dynamic on other sized phones
     var title: some View {
         Text("Calculate It")
-            .font(.custom("BricolageGrotesque-Medium", size: 55))
+            .font(.custom("BricolageGrotesque-Medium", size: 55, relativeTo: .largeTitle))
             .foregroundColor(.white)
             .textCase(.uppercase)
     }
@@ -30,7 +30,7 @@ struct HomeComponents {
     // TODO: I need to be fixed to be dynamic on other sized phones
     var subTitle: some View {
         Text("The Ultimate Practice App")
-            .font(.custom("BricolageGrotesque-Light", size: 20))
+            .font(.custom("BricolageGrotesque-Light", size: 20, relativeTo: .title3))
             .foregroundColor(.white.opacity(0.7))
             .textCase(.lowercase)
     }
@@ -46,5 +46,3 @@ struct HomeComponents {
             .cornerRadius(15)
     }
 }
-
-

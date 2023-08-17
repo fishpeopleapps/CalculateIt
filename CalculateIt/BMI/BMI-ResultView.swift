@@ -10,29 +10,24 @@
 import SwiftUI
 
 struct BMIResultView: View {
+    let components = BMIResultsComponents()
     var userBMI: Double
     @State private var showRecommendations = false
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [.mint, .teal],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-                .ignoresSafeArea()
+            components.bmiResultsBG
             VStack {
-                Text("This is the userBMI \(userBMI, specifier: "%.1f")")
+                Text("\(userBMI, specifier: "%.1f")")
+                    .font(.custom("Barriecito-Regular", size: 100, relativeTo: .largeTitle))
+                    .foregroundColor(.white)
                 if userBMI < 18.5 {
-                    Text("You're underweight")
+                    components.underweight
                 } else if userBMI <= 24.9 {
-                    Text("You're healthy")
+                    components.healthy
                 } else if userBMI <= 29.9 {
-                    Text("you're overweight")
+                    components.overweight
                 } else {
-                    Text("You're obese")
-                    Button("Improve BMI") {
-                        showRecommendations.toggle()
-                    }
+                    components.obese
                 }
             }
             .sheet(isPresented: $showRecommendations) {

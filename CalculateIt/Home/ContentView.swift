@@ -82,9 +82,11 @@ struct ContentView: View {
                         }
                     }
                 }
+                
                 }
+            
             }
-        .tint(.gray)
+        .tint(.black)
         }
     // I wonder if there is a better way to do this?
     // I show each each VStack sequentially after 0.1
