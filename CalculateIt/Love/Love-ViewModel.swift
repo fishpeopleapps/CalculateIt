@@ -4,13 +4,15 @@
 //
 //  Created by Kimberly Brewer on 8/7/23.
 //
+// TODO: Reduce repeating code and add text modifiers here or in another document
+
 
 import Foundation
 
 class LoveViewModel: ObservableObject {
     @Published var name01 = ""
     @Published var name02 = ""
-    
+
     func loveScore(name1: String, name2: String) -> Int {
         var score = ""
         var trueScore = 0

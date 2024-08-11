@@ -37,6 +37,10 @@
 		81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */; };
 		81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9A82A82DDF10093FAC7 /* Tip-ViewModel.swift */; };
 		81F9A9AC2A82E5DB0093FAC7 /* Macro-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9A9AB2A82E5DB0093FAC7 /* Macro-ViewModel.swift */; };
+		DF7D44A12C69237400A292A7 /* Love-TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D44A02C69237400A292A7 /* Love-TextModifiers.swift */; };
+		DF7D44A32C6928D800A292A7 /* HeartStorm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D44A22C6928D800A292A7 /* HeartStorm.swift */; };
+		DF7D44A52C69290D00A292A7 /* HeartDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D44A42C69290D00A292A7 /* HeartDrop.swift */; };
+		DF7D44A72C69291500A292A7 /* StormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D44A62C69291500A292A7 /* StormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		81F9A97A2A81D7620093FAC7 /* Conversion-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conversion-View.swift"; sourceTree = "<group>"; };
 		81F9A9A82A82DDF10093FAC7 /* Tip-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip-ViewModel.swift"; sourceTree = "<group>"; };
 		81F9A9AB2A82E5DB0093FAC7 /* Macro-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Macro-ViewModel.swift"; sourceTree = "<group>"; };
+		DF7D44A02C69237400A292A7 /* Love-TextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Love-TextModifiers.swift"; sourceTree = "<group>"; };
+		DF7D44A22C6928D800A292A7 /* HeartStorm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartStorm.swift; sourceTree = "<group>"; };
+		DF7D44A42C69290D00A292A7 /* HeartDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartDrop.swift; sourceTree = "<group>"; };
+		DF7D44A62C69291500A292A7 /* StormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				81F9A96F2A81CA290093FAC7 /* Love-View.swift */,
+				DF7D44A02C69237400A292A7 /* Love-TextModifiers.swift */,
 				81F9A9742A81D3E90093FAC7 /* Love-ResultView.swift */,
 				81F9A9712A81D0B90093FAC7 /* Love-ViewModel.swift */,
+				DF7D44A82C69292000A292A7 /* StormData */,
 			);
 			path = Love;
 			sourceTree = "<group>";
@@ -201,6 +211,16 @@
 				815E926A2A880D90006166C4 /* ActivityTypes.swift */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		DF7D44A82C69292000A292A7 /* StormData */ = {
+			isa = PBXGroup;
+			children = (
+				DF7D44A22C6928D800A292A7 /* HeartStorm.swift */,
+				DF7D44A42C69290D00A292A7 /* HeartDrop.swift */,
+				DF7D44A62C69291500A292A7 /* StormView.swift */,
+			);
+			path = StormData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,9 +323,11 @@
 			files = (
 				818A79F92A8E9C9E00BBA3AD /* BMI-WarningView.swift in Sources */,
 				81F9A96D2A819AE10093FAC7 /* Math-Button.swift in Sources */,
+				DF7D44A72C69291500A292A7 /* StormView.swift in Sources */,
 				81F9A9772A81D7550093FAC7 /* Tip-View.swift in Sources */,
 				81F9A9752A81D3E90093FAC7 /* Love-ResultView.swift in Sources */,
 				8111417E2A86EBF600F29CC6 /* RatingView.swift in Sources */,
+				DF7D44A12C69237400A292A7 /* Love-TextModifiers.swift in Sources */,
 				818A79F72A8E965C00BBA3AD /* BMI-ResultsViewComponents.swift in Sources */,
 				81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */,
 				81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */,
@@ -315,11 +337,13 @@
 				81F9A9702A81CA290093FAC7 /* Love-View.swift in Sources */,
 				81F9A97B2A81D7620093FAC7 /* Conversion-View.swift in Sources */,
 				8109C98E2A7C7EF20096DD64 /* ContentView.swift in Sources */,
+				DF7D44A32C6928D800A292A7 /* HeartStorm.swift in Sources */,
 				81F9A9672A8191810093FAC7 /* BMI-ResultView.swift in Sources */,
 				8109C98C2A7C7EF20096DD64 /* CalculateItApp.swift in Sources */,
 				8109C99F2A7D59FB0096DD64 /* BMI-ViewComponents.swift in Sources */,
 				81F9A96B2A819A540093FAC7 /* MathView.swift in Sources */,
 				8109C99D2A7D58CC0096DD64 /* BMI-ViewModel.swift in Sources */,
+				DF7D44A52C69290D00A292A7 /* HeartDrop.swift in Sources */,
 				815E926F2A881BB5006166C4 /* Macro-DetailView.swift in Sources */,
 				81F9A9722A81D0B90093FAC7 /* Love-ViewModel.swift in Sources */,
 				81F9A9AC2A82E5DB0093FAC7 /* Macro-ViewModel.swift in Sources */,

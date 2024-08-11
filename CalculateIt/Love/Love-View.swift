@@ -14,30 +14,37 @@ struct LoveView: View {
                 LinearGradient(colors: [.pink, .red], startPoint: .topTrailing, endPoint: .bottomLeading)
                     .ignoresSafeArea()
                 VStack {
-                    Text("Love Calculator")
-                        .foregroundColor(.white)
-                        .font(.custom("HeartsForAll", size: 60)) 
                     Spacer()
+                    Text("Love")
+                        .modifier(HeartText(size: 80))
+                    Text("Calculator")
+                        .modifier(HeartText(size: 70))
                     HStack {
-                        Text("Enter your name:")
-                            .foregroundColor(.white)
+                        Text("Your name:")
+                            .inputStyle()
                         TextField("", text: $love.name01)
                         .textFieldStyle(.roundedBorder)
                         .multilineTextAlignment(.leading)
+                        .autocorrectionDisabled()
                     }
                     HStack {
-                        Text("Enter their name:")
-                            .foregroundColor(.white)
+                        Text("Their name:")
+                            .inputStyle()
                         TextField("", text: $love.name02)
                         .textFieldStyle(.roundedBorder)
                         .multilineTextAlignment(.leading)
+                        .autocorrectionDisabled()
                     }
                     NavigationLink {
                         LoveResultView(score: love.loveScore(name1: love.name01, name2: love.name02))
                     } label: {
-                        Text("Calculate Score")
-                            .font(.title2).bold()
-                            .foregroundStyle(.white)
+                        Text("calculate score")
+                            .padding(10)
+                            .background(.white).opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(10)
+                            .padding(20)
+                            .foregroundStyle(.black)
+                            .font(.custom("HeartsForAll", size: 40))
                     }
                     Spacer()
                 }
