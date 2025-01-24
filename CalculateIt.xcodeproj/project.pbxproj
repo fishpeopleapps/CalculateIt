@@ -41,6 +41,7 @@
 		DF7D44A32C6928D800A292A7 /* HeartStorm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D44A22C6928D800A292A7 /* HeartStorm.swift */; };
 		DF7D44A52C69290D00A292A7 /* HeartDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D44A42C69290D00A292A7 /* HeartDrop.swift */; };
 		DF7D44A72C69291500A292A7 /* StormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D44A62C69291500A292A7 /* StormView.swift */; };
+		DFAB41132D4457F700FF1B46 /* BMI-ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB41122D4457F700FF1B46 /* BMI-ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		DF7D44A22C6928D800A292A7 /* HeartStorm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartStorm.swift; sourceTree = "<group>"; };
 		DF7D44A42C69290D00A292A7 /* HeartDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartDrop.swift; sourceTree = "<group>"; };
 		DF7D44A62C69291500A292A7 /* StormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormView.swift; sourceTree = "<group>"; };
+		DFAB41122D4457F700FF1B46 /* BMI-ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMI-ViewExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				8109C9992A7C859B0096DD64 /* BMI-View.swift */,
+				DFAB41122D4457F700FF1B46 /* BMI-ViewExtension.swift */,
 				81F9A9662A8191810093FAC7 /* BMI-ResultView.swift */,
 				818A79F62A8E965C00BBA3AD /* BMI-ResultsViewComponents.swift */,
 				8109C99E2A7D59FB0096DD64 /* BMI-ViewComponents.swift */,
@@ -328,6 +331,7 @@
 				81F9A9752A81D3E90093FAC7 /* Love-ResultView.swift in Sources */,
 				8111417E2A86EBF600F29CC6 /* RatingView.swift in Sources */,
 				DF7D44A12C69237400A292A7 /* Love-TextModifiers.swift in Sources */,
+				DFAB41132D4457F700FF1B46 /* BMI-ViewExtension.swift in Sources */,
 				818A79F72A8E965C00BBA3AD /* BMI-ResultsViewComponents.swift in Sources */,
 				81F9A9692A8196E00093FAC7 /* Home-ViewComponents.swift in Sources */,
 				81F9A9A92A82DDF10093FAC7 /* Tip-ViewModel.swift in Sources */,

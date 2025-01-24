@@ -4,8 +4,6 @@
 //
 //  Created by Kimberly Brewer on 8/3/23.
 //
-// TODO: Below
-/// a toggle to switch to metric
 
 import SwiftUI
 
@@ -33,21 +31,15 @@ struct BMIView: View {
                             HStack {
                                 StatBox(text: "Pounds:")
                                 TextField("Weight", value: $bmi.userWeight, format: .number)
-                                    .keyboardType(.numberPad)
-                                    .frame(width: 100)
-                                    .textFieldStyle(.roundedBorder)
+                                    .bmiTextFieldStyle(width: 100)
                             }
                             HStack {
                                 StatBox(text: "Feet:")
                                 TextField("feet", value: $bmi.userHeightInFeet, format: .number)
-                                    .keyboardType(.numberPad)
-                                    .frame(width: 80)
-                                    .textFieldStyle(.roundedBorder)
+                                    .bmiTextFieldStyle()
                                 StatBox(text: "Inches")
                                 TextField("inches", value: $bmi.userHeightInInches, format: .number)
-                                    .keyboardType(.numberPad)
-                                    .frame(width: 80)
-                                    .textFieldStyle(.roundedBorder)
+                                    .bmiTextFieldStyle()
                             }
                         }
                     }
@@ -60,20 +52,14 @@ struct BMIView: View {
                             bmiComponents.getYourResults
                                 .padding(.horizontal, 20)
                         }
-                        if bmi.hasValidEntries == false {
-                            bmiComponents.disclaimerText
-                        }
+                        if !bmi.hasValidEntries { bmiComponents.disclaimerText }
                     }
                     .disabled(bmi.hasValidEntries == false)
                     .frame(width: geo.size.width * 1.0, height: geo.size.height * 0.25)
-                    .onTapGesture {
-                        displayBMI.toggle()
-                    }
+                    .onTapGesture { displayBMI.toggle() }
                     Spacer()
                 }
-                .sheet(isPresented: $isShowingAlert) {
-                    BMIWarningView()
-                }
+                .sheet(isPresented: $isShowingAlert) { BMIWarningView() }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
