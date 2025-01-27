@@ -10,7 +10,7 @@ import SwiftUI
 struct RatingView: View {
     @ObservedObject var tipVM: TipViewModel
     // THIS IS HOW YOU CONNECT VARIABLES FROM OTHER VIEWS!
-    //@Binding var rating: Int
+    // @Binding var rating: Int
     // More
     var label = ""
     var maximumRating = 5

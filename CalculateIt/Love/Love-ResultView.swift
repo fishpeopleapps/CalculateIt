@@ -4,7 +4,7 @@
 //
 //  Created by Kimberly Brewer on 8/7/23.
 //
-// TODO: Add Storm data of hearts
+
 import SwiftUI
 
 struct LoveResultView: View {

@@ -14,7 +14,7 @@ enum ActivityType: CaseIterable {
     case heavy
     case intense
     func stringValue() -> String {
-        switch(self) {
+        switch self {
         case .none:
             return "None"
         case .light:

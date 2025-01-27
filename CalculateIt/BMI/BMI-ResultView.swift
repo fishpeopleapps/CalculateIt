@@ -4,8 +4,6 @@
 //
 //  Created by Kimberly Brewer on 8/7/23.
 //
-// TODO: Use an enum? for the background color maybe
-// TODO: Improve Recommendations View, extract from this view
 
 import SwiftUI
 
@@ -20,13 +18,14 @@ struct BMIResultView: View {
                 Text("\(userBMI, specifier: "%.1f")")
                     .font(.custom("Barriecito-Regular", size: 100, relativeTo: .largeTitle))
                     .foregroundColor(.white)
-                if userBMI < 18.5 {
-                    components.underweight
-                } else if userBMI <= 24.9 {
+                switch userBMI {
+                case 0...18.5: // Less than 18.5
+                        components.underweight
+                case 18.5...24.9: // Between 18.5 and 24.9
                     components.healthy
-                } else if userBMI <= 29.9 {
+                case 25.0...29.9: // Between 25.0 and 29.9
                     components.overweight
-                } else {
+                default: // Anything 30.0 or above
                     components.obese
                 }
             }

@@ -26,7 +26,6 @@ struct MathView: View {
                 MathButton(name: "\(9)")
                 MathButton(name: "x")
             }
-            
             HStack {
                 MathButton(name: "\(4)")
                 MathButton(name: "\(5)")

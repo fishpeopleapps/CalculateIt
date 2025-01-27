@@ -82,9 +82,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                
                 }
-            
             }
         .tint(.black)
         }

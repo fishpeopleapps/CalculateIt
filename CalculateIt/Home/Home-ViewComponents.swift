@@ -4,6 +4,7 @@
 //
 //  Created by Kimberly Brewer on 8/7/23.
 //
+// TODO: Fix text so it is dynamic for other phone sizes
 
 import SwiftUI
 
@@ -19,7 +20,6 @@ struct HomeComponents {
         .ignoresSafeArea()
     }
     // I am the large title
-    // TODO: I need to be fixed to be dynamic on other sized phones
     var title: some View {
         Text("Calculate It")
             .font(.custom("BricolageGrotesque-Medium", size: 55, relativeTo: .largeTitle))
@@ -27,7 +27,6 @@ struct HomeComponents {
             .textCase(.uppercase)
     }
     // I am the small sub title that appears directly below the title above
-    // TODO: I need to be fixed to be dynamic on other sized phones
     var subTitle: some View {
         Text("The Ultimate Practice App")
             .font(.custom("BricolageGrotesque-Light", size: 20, relativeTo: .title3))
@@ -35,7 +34,6 @@ struct HomeComponents {
             .textCase(.lowercase)
     }
     // I am the toggle menu button that appears on the home page
-    // TODO: I should also be fixed to be a bit dyanmic
     var toggleMenuButton: some View {
         Text("Toggle Menu")
             .font(.custom("BricolageGrotesque-Regular", size: 25))

@@ -18,7 +18,6 @@ struct MacroDetailView: View {
             Text("Total calories:")
             Text("\(totalCalories(fat: 35, carbs: 174, protein: 63))")
         }
-        
     }
     func totalCalories(fat: Int, carbs: Int, protein: Int) -> Int {
         (fat * 9) + (carbs * 4) + (protein * 4)

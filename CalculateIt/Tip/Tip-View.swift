@@ -4,7 +4,6 @@
 //
 //  Created by Kimberly Brewer on 8/7/23.
 //
-// TODO: Improve UI
 import SwiftUI
 
 struct TipView: View {
